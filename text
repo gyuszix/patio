@@ -34,4 +34,18 @@ tuple_1 = (1,)
 tuple_2 = (2,)
 tuple_3 = (tuple_1, tuple_2)
 print(type(tuple_3))
+------------------------------------------------------------------------------------------------------------------------
+Exercise: comma code
+spam = ['apples', 'bananas', 'tofu', 'cats']
 
+
+def some_function(parameter):
+    for index, item in enumerate(parameter):
+        if index == (len(spam) - 1):
+            print(f'and {item}')
+        else:
+            print(item, end=', ')
+
+
+some_function(['apples', 'bananas', 'tofu', 'cats'])
+some_function(spam)
