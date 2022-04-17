@@ -1,30 +1,22 @@
-# exercise: coin flip streaks
-import random
+class Dog:
 
-#variable declaration
+    def __init__(self, color, breed, age):
+        self.color = color
+        self.breed = breed
+        self.age = age
 
-numberOfStreaks = 0
-CoinFlip = []
-streak = 0
+    def introduce(self):
+        return self.color, self.breed, self.age
 
-for experimentNumber in range(10000):
-    # Code that creates a list of 100 'heads' or 'tails' values.
-    for i in range(100):
-        CoinFlip.append(random.randint(0,1))
-    #does not matter if it is 0 or 1, H or T, peas or lentils. I am going to check if there is multiple 0 or 1 in a row
 
-    # Code that checks if there is a streak of 6 heads or tails in a row.
-    for i in range(len(CoinFlip)):
-        if i==0:
-            pass
-        elif CoinFlip[i] == CoinFlip[i-1]:  #checks if current list item is the same as before
-            streak += 1
-        else:
-            streak = 0
+moses = Dog('tan', 'mutt', 8)
+print(moses.color, moses.breed, moses.age)
 
-        if streak == 6:
-            numberOfStreaks += 1
+zizi = Dog('white', 'mutt', 15)
+print(zizi.color, zizi.breed, zizi.age)
 
-    CoinFlip = []
+print('-' * 10)
 
-print('Chance of streak: %s%%' % (numberOfStreaks / (100*10000)))
+print(Dog.introduce(moses))
+print(moses.introduce())
+print(id(Dog.introduce(moses)) == id(moses.introduce()))
