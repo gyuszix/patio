@@ -1,22 +1,28 @@
-class Dog:
-
-    def __init__(self, color, breed, age):
-        self.color = color
-        self.breed = breed
-        self.age = age
-
-    def introduce(self):
-        return self.color, self.breed, self.age
+import pprint
 
 
-moses = Dog('tan', 'mutt', 8)
-print(moses.color, moses.breed, moses.age)
+# birthday = {'Gyula': 'Feb 06',
+#             'Gyula': 'Feb 07',
+#             'Misha': 'Feb 07',
+#             'Nao':   'Feb 08'}
+#
+# while True:
+#         name = input('Enter a name or press nothing to stop the program\n')
+#         if name == '':
+#                 break
+#
+#         if name in birthday:
+#                 print( '{} is the birthday of {}'.format(birthday[name], name))
+#         else:
+#                 print('That is not in the database\n When is your birthday?')
+#                 bday = input()
+#                 birthday[name] = bday
+#                 print('birthday database now updated:' + str(birthday))
 
-zizi = Dog('white', 'mutt', 15)
-print(zizi.color, zizi.breed, zizi.age)
+#
+# print(list(birthday))
+# print(birthday['Gyula'])
+# print('Gyula' in birthday)
+# print('Gyula' in birthday.values())
 
-print('-' * 10)
 
-print(Dog.introduce(moses))
-print(moses.introduce())
-print(id(Dog.introduce(moses)) == id(moses.introduce()))
