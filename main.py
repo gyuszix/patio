@@ -22,10 +22,14 @@ def valid_parentheses(string):
     print('f')
     return False
 
-valid_parentheses('(( )) ()())')
-
 
 # needs refining
 # https://www.codewars.com/kata/52774a314c2333f0a7000688/train/python
 # a good idea would be to make two lists and count one by one how many are missing
 # also on top of that idea on top just make sure to have a flag like 'begins with ( == yes
+
+
+from random_functions import generate_n_numbers
+
+
+print(generate_n_numbers(335,1,336))
